@@ -149,7 +149,7 @@ class b{
 参考：<https://blog.csdn.net/haoel/article/details/1948051>
 * 虚函数是动态绑定的基础，虚函数不许是非静态成员函数，经过派生后可以实现运行过程中的多态；
 * C++中的虚函数的作用主要是实现了多态的机制，简而言之就是用父类型别的指针指向其子类的实例，然后通过父类的指针调用实际子类的成员函数。这种技术可以让父类的指针有“多种形态”，这是一种泛型技术。<br>所谓泛型技术，说白了就是试图使用不变的代码来实现可变的算法。
-* 虚函数（Virtual Function）是通过一张虚函数表（Virtual Table）来实现的。简称为V-Table；<br>在这个表中，主是要一个类的虚函数的地址表，这张表解决了继承、覆盖的问题，保证其容真实反应实际的函数。它就像一个地图一样，指明了实际所应该调用的函数。![](https://p-blog.csdn.net/images/p_blog_csdn_net/haoel/15190/o_vtable1.jpg)
+* 虚函数（Virtual Function）是通过一张虚函数表（Virtual Table）来实现的。简称为V-Table；<br>在这个表中，主是要一个类的虚函数的地址表，这张表解决了继承、覆盖的问题，保证其容真实反应实际的函数。它就像一个地图一样，指明了实际所应该调用的函数。<br>![](https://p-blog.csdn.net/images/p_blog_csdn_net/haoel/15190/o_vtable1.jpg)
 
 ### 虚函数（使用）
 使用条件：
