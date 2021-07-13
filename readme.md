@@ -205,4 +205,47 @@ test:test10
 * 对非多态类型的**公有继承**应当慎重，而且一般没太大必要；
 * dynamic_cast实例：p337 基类指针向派生类转换；
 * c++ 获取类型名称：typeid；test10/typeid
-* 
+  
+## 群体
+### 函数模板
+* C++最重要的特性之一就是代码重用；
+* 通过模板可以实现参数化多态；
+* 编译器以函数模板生成一个函数的过程为函数模板的**实例化**，函数为该模板的**实例**；
+* 在定义类模板或者函数模板时，typename 和 class 关键字都可以用于指定模板参数中的类型。<br>typename 另外一个作用为：使用嵌套依赖类型(nested depended name)；<br>
+  ```cpp 
+  class MyArray 
+  { 
+      public：
+      typedef int LengthType;
+      .....
+  }
+
+  template<class T>
+  void MyMethod( T myarr ) 
+  { 
+      typedef typename T::LengthType LengthType; 
+      LengthType length = myarr.GetLength; 
+  }
+  ```
+  这个时候 typename 的作用就是告诉 c++ 编译器，typename 后面的字符串为一个类型名称，而不是成员函数或者成员变量; 
+* typedef 和 #define 区别
+  ```c
+    typedef　char*　pStr1;
+    #define　pStr2　char*　
+    pStr1　s1, s2;
+    pStr2　s3, s4;
+  ```
+  在上述的变量定义中，s1、s2、s3都被定义为 char* 类型；但是s4则定义成了 char 类型，而不是我们所预期的指针变量 char*，这是因为 #define 只做简单的字符串替换，替换后的相关代码等同于为：
+  ```c
+  char*　s3, s4; 
+  ```
+  而使用 typedef 为 char* 定义了新类型 pStr1 后，相关代码等同于为：
+  ```c
+  char *s3, *s4;
+  ```
++ 函数模板本身在编译是不生成目标代码；只有实例化是才生成目标代码；
++ 被多个文件引用的函数模板应将将函数也一并放入头文件中；
++ 函数指针也只能指向模板实例，而不是模板本身；
+
+### 类模板
+
