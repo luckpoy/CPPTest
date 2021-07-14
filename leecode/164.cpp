@@ -57,5 +57,6 @@ int main(int argc, char const *argv[])
     int b[4]={100,3,2,1};
     vector<int> a(b,b+4);
     cout<<maximumGap(a)<<endl;
+	//cout<<a.begin()<<endl;
     return 0;
 }

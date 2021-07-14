@@ -262,3 +262,12 @@ test:test10
 * 模板元编程是指在模板实例化的同时利用编译器完成一些计算任务；从而提程序的运行效率；（p392）
 
 ## 泛程序和标准模板库
+### 迭代器
+* 对于输入迭代器而言，p1==p2不能保证++p1==++p2，更不能保证*(+p1)==*(++p2); 因此输入迭代器只适合做只需要遍历一次的算法输入；
+* vector::begin():Return iterator to beginning
+  Returns an iterator pointing to the first element in the vector.
+
+  Notice that, unlike member vector::front, which returns a reference to the first element, this function returns a random access iterator pointing to it.
+
+  If the container is empty, the returned iterator value shall not be dereferenced.<br>**----C++ reference**
+* 
