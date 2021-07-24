@@ -263,7 +263,7 @@ test:test10
 
 ## 泛程序和标准模板库
 ### 迭代器
-* 对于输入迭代器而言，p1==p2不能保证++p1==++p2，更不能保证*(+p1)==*(++p2); 因此输入迭代器只适合做只需要遍历一次的算法输入；
+* 对于输入迭代器而言，p1 == p2不能保证++p1 == ++p2，更不能保证*(+p1)==*(++p2); 因此输入迭代器只适合做只需要遍历一次的算法输入；
 * vector::begin():Return iterator to beginning
   Returns an iterator pointing to the first element in the vector.
 
