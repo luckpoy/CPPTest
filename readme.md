@@ -1,4 +1,5 @@
 # ReadNote
+![]https://img.shields.io/aur/last-modified/google-chrome
 ## data share and protect
 ### namespace 作用域问题
 * 每个源文件的匿名命名空间是彼此不同的，在一个源文件中没有办法访问其他源文件的匿名命名空间。[page 149]
